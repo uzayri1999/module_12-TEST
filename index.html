@@ -8,7 +8,7 @@
 </head>
 <body class="body">
   <main class="main">
-    <nav class="nav-top"></nav>
+    <nav id="scrollable" class="nav-top"></nav>
     <section class="section">
       <div class="title">
         <h2 class="title_text">Completed projects</h2>
@@ -42,19 +42,11 @@
       <img id="image" class="image" src="" alt="room's photo">
     </div>
     <nav class="nav-bottom">
-      <span id="arrow-left" class="arrow-left">
+      <span id="arrow-left" class="arrow">
         <img src="src/img/arrow_left.svg" alt="arrow left">
       </span>
-      <span class="point point-1 point_active">
-        <img src="" alt="point">
-      </span>
-      <span class="point point-2">
-        <img src="" alt="point">
-      </span>
-      <span class="point point-3">
-        <img src="" alt="point">
-      </span>
-      <span id="arrow-right" class="arrow-right">
+      <div class="point-block"></div>
+      <span id="arrow-right" class="arrow">
         <img src="src/img/arrow_right.svg" alt="arrow right">
       </span>
     </nav>

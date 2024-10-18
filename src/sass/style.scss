@@ -15,6 +15,7 @@
 }
 
 .main {
+  position: relative;
   display: grid;
   grid-template-columns: 400px + 42px 679px;
   grid-template-rows: 24px 390px 47px;
@@ -25,12 +26,20 @@
     "section image-block"
     "nav-bottom image-block";
 
-
   .nav-top {
     grid-area: nav-top;
+    /* display: grid; 
+    grid-template-columns: repeat(3, auto); 
+    justify-content: space-between; */
     display: flex;
-    justify-content: space-between;
-    width: 623px;
+    position: absolute;
+    column-gap: 25px;
+    row-gap: 6px;
+    text-align: center;
+    width: 679px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    flex-wrap: nowrap;
     
 
     .nav-top_link {
@@ -40,6 +49,7 @@
       font-family: $ffYO;
       color: #FFFFFF4D;
       cursor: pointer;
+      text-wrap: nowrap;
     }
     .link_active {
       color: #E3B873;
@@ -124,38 +134,28 @@
   }
   .nav-bottom {
     grid-area: nav-bottom;
-    position: relative;
+    position: absolute;
     display: flex;
+    height: 18px;
+    bottom: 0;
 
 
-    @mixin arrow ($left) {
-      left: $left;
-      position: absolute;
+    .arrow {
       bottom: 0;
       cursor: pointer;
     }
-
-    .arrow-left {
-      @include arrow(1px)
-    }
-    .arrow-right {
-      @include arrow(165px)
-    }
-    .point {
-      position: absolute;
+    .point-block {
+      position: relative;
+      display: flex;
+      column-gap: 18px;
+      height: 18px;
+      margin: 0 27px;
       bottom: 2px;
-      cursor: pointer;
-    }
-    .point-1 {
-      left: 71px;
-    }
-    .point-2 {
-      left: 98px;
-    }
-    .point-3 {
-      left: 125px;
+
+      
+      .point {
+        cursor: pointer;
+      }
     }
   }
 }
-
-
